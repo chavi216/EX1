@@ -1,21 +1,22 @@
-import { useState, useEffect } from 'react'
-
+import React from "react";
 
 function Item2() {
-  const [time, setTime] = useState(new Date().toLocaleTimeString());
+  function startClock() {
+    const clockElement = document.getElementById("clock-id");
+    if (clockElement) {
+      clockElement.innerText = new Date().toLocaleTimeString();
+      setInterval(() => {
+        clockElement.innerText = new Date().toLocaleTimeString();
+      }, 1000);
+    }
+  }
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTime(new Date().toLocaleTimeString());
-    }, 1000);
-
-    return () => clearInterval(interval); // ניקוי ה-interval כשהרכיב מתפרק
-  }, []);
+  setTimeout(startClock, 0);
 
   return (
-   <div className="clock">
+    <div className="clock">
       <h1>שעון</h1>
-      <div>{time}</div>
+      <p id="clock-id"></p>
     </div>
   );
 }
