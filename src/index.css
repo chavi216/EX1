@@ -1,0 +1,51 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+h1 {
+  text-align: center;
+   margin-bottom: 40px;;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between; 
+  gap: 40px;                      
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.component-box {
+  flex: 1;                         
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+
+.item-list {
+  background-color: #eca4a4; 
+}
+
+.clock {
+  background-color: #afe3df; 
+}
+
+.messages{
+  background-color: #aa9fe7; 
+  color: #333;               
+}
+
